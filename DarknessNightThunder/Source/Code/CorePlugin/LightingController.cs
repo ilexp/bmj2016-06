@@ -46,6 +46,7 @@ namespace DarknessNightThunder
 		bool ICmpRenderer.IsVisible(IDrawDevice device)
 		{
 			return 
+				!device.IsPicking &&
 				(device.VisibilityMask & VisibilityFlag.ScreenOverlay) != VisibilityFlag.None &&
 				(device.VisibilityMask & VisibilityFlag.Group1) != VisibilityFlag.None;
 		}
@@ -73,6 +74,7 @@ namespace DarknessNightThunder
 		private void UpdateFullScreenRenderTarget(ContentRef<RenderTarget> target)
 		{
 			if (target == null) return;
+			if (DualityApp.TargetResolution == Vector2.Zero) return;
 
 			RenderTarget targetRes = target.Res;
 			bool updatedTarget = false;

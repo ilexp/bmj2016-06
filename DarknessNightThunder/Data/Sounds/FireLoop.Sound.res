@@ -12,7 +12,7 @@
   <fadeOutAt dataType="Float">0</fadeOutAt>
   <fadeOutTime dataType="Float">0</fadeOutTime>
   <lowpassFactor dataType="Float">1</lowpassFactor>
-  <maxDistFactor dataType="Float">1</maxDistFactor>
+  <maxDistFactor dataType="Float">0.5</maxDistFactor>
   <maxInstances dataType="Int">5</maxInstances>
   <minDistFactor dataType="Float">1</minDistFactor>
   <pitchFactor dataType="Float">1</pitchFactor>

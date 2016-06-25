@@ -58,26 +58,33 @@
                 <vel dataType="Struct" type="Duality.Vector3" />
                 <velAbs dataType="Struct" type="Duality.Vector3" />
               </item>
-              <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="1622803266">
+              <item dataType="Struct" type="DarknessNightThunder.ActorRenderer" id="3463630727">
                 <active dataType="Bool">true</active>
+                <animDuration dataType="Float">5</animDuration>
+                <animFirstFrame dataType="Int">0</animFirstFrame>
+                <animFrameCount dataType="Int">0</animFrameCount>
+                <animLoopMode dataType="Enum" type="DarknessNightThunder.ActorRenderer+LoopMode" name="Loop" value="1" />
+                <animPaused dataType="Bool">false</animPaused>
+                <animTime dataType="Float">0</animTime>
                 <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
                   <A dataType="Byte">128</A>
                   <B dataType="Byte">255</B>
                   <G dataType="Byte">255</G>
                   <R dataType="Byte">255</R>
                 </colorTint>
+                <customFrameSequence />
                 <customMat />
-                <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
+                <depthScale dataType="Float">0.01</depthScale>
                 <gameobj dataType="ObjectRef">4275603994</gameobj>
-                <offset dataType="Int">0</offset>
-                <pixelGrid dataType="Bool">false</pixelGrid>
+                <height dataType="Float">0</height>
+                <isVertical dataType="Bool">false</isVertical>
+                <offset dataType="Float">-2</offset>
                 <rect dataType="Struct" type="Duality.Rect">
                   <H dataType="Float">512</H>
                   <W dataType="Float">512</W>
                   <X dataType="Float">-256</X>
                   <Y dataType="Float">-256</Y>
                 </rect>
-                <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
                 <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
                   <contentPath dataType="String">Data\Sprites\FireBallLight.Material.res</contentPath>
                 </sharedMat>
@@ -85,18 +92,18 @@
               </item>
             </_items>
             <_size dataType="Int">2</_size>
-            <_version dataType="Int">2</_version>
+            <_version dataType="Int">4</_version>
           </compList>
           <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2470811850" surrogate="true">
             <header />
             <body>
               <keys dataType="Array" type="System.Object[]" id="3349988360">
                 <item dataType="Type" id="3138994540" value="Duality.Components.Transform" />
-                <item dataType="Type" id="3644012598" value="Duality.Components.Renderers.SpriteRenderer" />
+                <item dataType="Type" id="3644012598" value="DarknessNightThunder.ActorRenderer" />
               </keys>
               <values dataType="Array" type="System.Object[]" id="817897950">
                 <item dataType="ObjectRef">2340951630</item>
-                <item dataType="ObjectRef">1622803266</item>
+                <item dataType="ObjectRef">3463630727</item>
               </values>
             </body>
           </compMap>
@@ -138,26 +145,33 @@
                 <vel dataType="Struct" type="Duality.Vector3" />
                 <velAbs dataType="Struct" type="Duality.Vector3" />
               </item>
-              <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="2652706667">
+              <item dataType="Struct" type="DarknessNightThunder.ActorRenderer" id="198566832">
                 <active dataType="Bool">true</active>
+                <animDuration dataType="Float">5</animDuration>
+                <animFirstFrame dataType="Int">0</animFirstFrame>
+                <animFrameCount dataType="Int">0</animFrameCount>
+                <animLoopMode dataType="Enum" type="DarknessNightThunder.ActorRenderer+LoopMode" name="Loop" value="1" />
+                <animPaused dataType="Bool">false</animPaused>
+                <animTime dataType="Float">0</animTime>
                 <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
                   <A dataType="Byte">255</A>
                   <B dataType="Byte">255</B>
                   <G dataType="Byte">255</G>
                   <R dataType="Byte">255</R>
                 </colorTint>
+                <customFrameSequence />
                 <customMat />
-                <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
+                <depthScale dataType="Float">0.01</depthScale>
                 <gameobj dataType="ObjectRef">1010540099</gameobj>
-                <offset dataType="Int">0</offset>
-                <pixelGrid dataType="Bool">false</pixelGrid>
+                <height dataType="Float">0</height>
+                <isVertical dataType="Bool">false</isVertical>
+                <offset dataType="Float">-0.01</offset>
                 <rect dataType="Struct" type="Duality.Rect">
                   <H dataType="Float">128</H>
                   <W dataType="Float">128</W>
                   <X dataType="Float">-64</X>
                   <Y dataType="Float">-64</Y>
                 </rect>
-                <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
                 <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
                   <contentPath dataType="String">Data\Sprites\FireBallLight.Material.res</contentPath>
                 </sharedMat>
@@ -165,7 +179,7 @@
               </item>
             </_items>
             <_size dataType="Int">2</_size>
-            <_version dataType="Int">2</_version>
+            <_version dataType="Int">4</_version>
           </compList>
           <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="318194368" surrogate="true">
             <header />
@@ -176,7 +190,7 @@
               </keys>
               <values dataType="Array" type="System.Object[]" id="1679415032">
                 <item dataType="ObjectRef">3370855031</item>
-                <item dataType="ObjectRef">2652706667</item>
+                <item dataType="ObjectRef">198566832</item>
               </values>
             </body>
           </compMap>
@@ -206,7 +220,6 @@
             <contentPath dataType="String">Data\Sounds\FireLoop.Sound.res</contentPath>
           </fireLoopSound>
           <gameobj dataType="ObjectRef">3575206765</gameobj>
-          <hurtList />
           <lifeTimeMs dataType="Float">0</lifeTimeMs>
           <transferEnergy dataType="Float">0</transferEnergy>
         </item>
@@ -217,11 +230,11 @@
           <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Dynamic" value="1" />
           <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1" value="1" />
           <colFilter />
-          <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="All" value="2147483647" />
+          <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1, Cat3, Cat4, Cat5, Cat6, Cat7, Cat8, Cat9, Cat10, Cat11, Cat12, Cat13, Cat14, Cat15, Cat16, Cat17, Cat18, Cat19, Cat20, Cat21, Cat22, Cat23, Cat24, Cat25, Cat26, Cat27, Cat28, Cat29, Cat30, Cat31" value="2147483645" />
           <continous dataType="Bool">false</continous>
           <explicitInertia dataType="Float">0</explicitInertia>
           <explicitMass dataType="Float">2</explicitMass>
-          <fixedAngle dataType="Bool">false</fixedAngle>
+          <fixedAngle dataType="Bool">true</fixedAngle>
           <gameobj dataType="ObjectRef">3575206765</gameobj>
           <ignoreGravity dataType="Bool">false</ignoreGravity>
           <joints />
@@ -235,13 +248,13 @@
                 <friction dataType="Float">0.3</friction>
                 <parent dataType="ObjectRef">2343015993</parent>
                 <position dataType="Struct" type="Duality.Vector2" />
-                <radius dataType="Float">10</radius>
+                <radius dataType="Float">4.7539587</radius>
                 <restitution dataType="Float">0.3</restitution>
-                <sensor dataType="Bool">true</sensor>
+                <sensor dataType="Bool">false</sensor>
               </item>
             </_items>
             <_size dataType="Int">1</_size>
-            <_version dataType="Int">8</_version>
+            <_version dataType="Int">14</_version>
           </shapes>
         </item>
         <item dataType="Struct" type="DarknessNightThunder.ActorRenderer" id="2763233498">
@@ -291,8 +304,8 @@
           <item dataType="ObjectRef">3138994540</item>
           <item dataType="Type" id="2121370844" value="DarknessNightThunder.MagicalObjects.MagicalFire" />
           <item dataType="Type" id="2774206742" value="Duality.Components.Physics.RigidBody" />
-          <item dataType="Type" id="2559235656" value="DarknessNightThunder.ActorRenderer" />
-          <item dataType="Type" id="911564210" value="DarknessNightThunder.SpellInteractor" />
+          <item dataType="ObjectRef">3644012598</item>
+          <item dataType="Type" id="2559235656" value="DarknessNightThunder.SpellInteractor" />
         </keys>
         <values dataType="Array" type="System.Object[]" id="495047822">
           <item dataType="ObjectRef">1640554401</item>

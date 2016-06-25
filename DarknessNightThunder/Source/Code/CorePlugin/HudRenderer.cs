@@ -53,19 +53,17 @@ namespace DarknessNightThunder
 		{
 			return 
 				DualityApp.ExecContext != DualityApp.ExecutionContext.Editor &&
+				(device.VisibilityMask & VisibilityFlag.ScreenOverlay) != VisibilityFlag.None && 
 				(device.VisibilityMask & VisibilityFlag.AllGroups) != VisibilityFlag.None;
 		}
 		void ICmpRenderer.Draw(IDrawDevice device)
 		{
 			Canvas canvas = new Canvas(device);
-			if ((device.VisibilityMask & VisibilityFlag.ScreenOverlay) != VisibilityFlag.None && 
-				(device.VisibilityMask & VisibilityFlag.Group0) != VisibilityFlag.None)
+			if ((device.VisibilityMask & VisibilityFlag.Group0) != VisibilityFlag.None)
 			{
 				this.DrawOverlayPass(canvas);
 			}
-			else if (
-				(device.VisibilityMask & VisibilityFlag.ScreenOverlay) == VisibilityFlag.None && 
-				(device.VisibilityMask & VisibilityFlag.Group1) != VisibilityFlag.None)
+			else if ((device.VisibilityMask & VisibilityFlag.Group1) != VisibilityFlag.None)
 			{
 				this.DrawLightPass(canvas);
 			}
@@ -78,22 +76,22 @@ namespace DarknessNightThunder
 			SpellScriptEditor spellEditor = Scene.Current.FindComponent<SpellScriptEditor>();
 			bool spellEditorActive = (spellEditor != null && spellEditor.Active);
 
-			Vector3 mouseWorldCoord = mainCam.GetSpaceCoord(DualityApp.Mouse.Pos);
-			Vector3 playerWorldCoord = this.player.CharacterController.GameObj.Transform.Pos;
+			Vector2 mouseScreenCoord = DualityApp.Mouse.Pos;
+			Vector2 playerScreenCoord = mainCam.GetScreenCoord(this.player.CharacterController.GameObj.Transform.Pos).Xy;
 
 			if (!spellEditorActive)
 			{
 				canvas.State.SetMaterial(this.cursorLight);
 				canvas.FillRect(
-					mouseWorldCoord.X - this.cursorLightSize, 
-					mouseWorldCoord.Y - this.cursorLightSize, 
+					mouseScreenCoord.X - this.cursorLightSize, 
+					mouseScreenCoord.Y - this.cursorLightSize, 
 					this.cursorLightSize * 2, 
 					this.cursorLightSize * 2);
 			}
 			canvas.State.SetMaterial(this.playerLight);
 			canvas.FillRect(
-				playerWorldCoord.X - this.playerLightSize, 
-				playerWorldCoord.Y - this.playerLightSize, 
+				playerScreenCoord.X - this.playerLightSize, 
+				playerScreenCoord.Y - this.playerLightSize, 
 				this.playerLightSize * 2, 
 				this.playerLightSize * 2);
 		}

@@ -8,11 +8,11 @@
   <physicsVelThreshold dataType="Float">0.8333333</physicsVelThreshold>
   <skipBackends />
   <soundDopplerFactor dataType="Float">1</soundDopplerFactor>
-  <speedOfSound dataType="Float">360</speedOfSound>
+  <speedOfSound dataType="Float">180</speedOfSound>
   <startScene dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
     <contentPath dataType="String">Data\MainScene.Scene.res</contentPath>
   </startScene>
-  <version dataType="UInt">29</version>
+  <version dataType="UInt">65</version>
   <websiteUrl dataType="String">http://www.adamslair.net</websiteUrl>
 </root>
 <!-- XmlFormatterBase Document Separator -->

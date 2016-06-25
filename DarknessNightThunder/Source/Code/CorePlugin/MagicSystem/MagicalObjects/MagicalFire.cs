@@ -13,9 +13,8 @@ using Duality.Components.Physics;
 namespace DarknessNightThunder.MagicalObjects
 {
 	[RequiredComponent(typeof(Transform))]
-    public class MagicalFire : MagicalObject, ICmpCollisionListener, ICmpInitializable
+    public class MagicalFire : MagicalObject, ICmpInitializable
     {
-		private List<Character> hurtList = null;
 		private float lifeTimeMs = 0.0f;
 		private ContentRef<Sound> fireLoopSound = null;
 		[DontSerialize] private SoundInstance fireLoopInstance = null;
@@ -82,13 +81,22 @@ namespace DarknessNightThunder.MagicalObjects
 
 		private void HurtCharacters()
 		{
-			if (this.hurtList != null)
+			float radius = 20.0f;
+			Vector2 basePos = this.GameObj.Transform.Pos.Xy;
+			Vector2 size = Vector2.One * radius * 2.0f;
+			List<RigidBody> nearBodies = RigidBody.QueryRectGlobal(basePos - 0.5f * size, size);
+
+			float energyFactor = MathF.Clamp(this.Energy / 200.0f, 0.0f, 3.0f);
+			foreach (RigidBody body in nearBodies)
 			{
-				float energyFactor = MathF.Clamp(this.Energy / 200.0f, 0.0f, 3.0f);
-				foreach (Character c in this.hurtList)
-				{
-					c.DoDamage(energyFactor * 0.1f * Time.TimeMult);
-				}
+				Transform transform = body.GameObj.Transform;
+				Character character = body.GameObj.GetComponent<Character>();
+				if (character == null) continue;
+				
+				float distance = (transform.Pos.Xy - basePos).Length;
+				if (distance > radius) continue;
+
+				character.DoDamage(energyFactor * 0.1f * Time.TimeMult);
 			}
 		}
 		private float GetScale(float energy)
@@ -96,24 +104,6 @@ namespace DarknessNightThunder.MagicalObjects
 			return MathF.Max(MathF.Sqrt(energy * 0.5f) / 10.0f, 0.001f);
 		}
 
-		void ICmpCollisionListener.OnCollisionBegin(Component sender, CollisionEventArgs args)
-		{
-			Character character = args.CollideWith.GetComponent<Character>();
-			if (character != null)
-			{
-				if (this.hurtList == null) this.hurtList = new List<Character>();
-				this.hurtList.Add(character);
-			}
-		}
-		void ICmpCollisionListener.OnCollisionEnd(Component sender, CollisionEventArgs args)
-		{
-			Character character = args.CollideWith.GetComponent<Character>();
-			if (character != null && this.hurtList != null)
-			{
-				this.hurtList.Remove(character);
-			}
-		}
-		void ICmpCollisionListener.OnCollisionSolve(Component sender, CollisionEventArgs args) {}
 		void ICmpInitializable.OnInit(Component.InitContext context) {}
 		void ICmpInitializable.OnShutdown(Component.ShutdownContext context)
 		{
