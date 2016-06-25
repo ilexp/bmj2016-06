@@ -66,3 +66,6 @@ DarknessNightThunder/perflog_editor.txt
 DarknessNightThunder/Source/Code/CorePlugin/bin/
 DarknessNightThunder/Source/Code/CorePlugin/obj/
 DarknessNightThunder/Source/Code/CorePlugin/GamePlugin.core.xml
+DarknessNightThunder/Backup/
+DarknessNightThunder/logfile.txt
+DarknessNightThunder/perflog.txt
