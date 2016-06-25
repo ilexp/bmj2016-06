@@ -254,7 +254,7 @@
               </item>
             </_items>
             <_size dataType="Int">1</_size>
-            <_version dataType="Int">16</_version>
+            <_version dataType="Int">20</_version>
           </shapes>
         </item>
         <item dataType="Struct" type="DarknessNightThunder.ActorRenderer" id="2763233498">

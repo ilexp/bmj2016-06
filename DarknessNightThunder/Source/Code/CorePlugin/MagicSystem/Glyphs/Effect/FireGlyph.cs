@@ -18,7 +18,7 @@ namespace DarknessNightThunder.Glyphs
 		}
 		protected override ContentRef<Prefab> ObjectTemplate
 		{
-			get { return new ContentRef<Prefab>(null, "Data/Prefabs/MagicalFire.Prefab.res"); }
+			get { return new ContentRef<Prefab>(null, "Data\\Prefabs\\MagicalFire.Prefab.res"); }
 		}
 
 		protected override float GetEnergyConsumption()
