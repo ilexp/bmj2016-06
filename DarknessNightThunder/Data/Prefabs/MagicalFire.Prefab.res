@@ -78,7 +78,7 @@
                 <gameobj dataType="ObjectRef">4275603994</gameobj>
                 <height dataType="Float">0</height>
                 <isVertical dataType="Bool">false</isVertical>
-                <offset dataType="Float">-2</offset>
+                <offset dataType="Float">-5</offset>
                 <rect dataType="Struct" type="Duality.Rect">
                   <H dataType="Float">512</H>
                   <W dataType="Float">512</W>
@@ -254,7 +254,7 @@
               </item>
             </_items>
             <_size dataType="Int">1</_size>
-            <_version dataType="Int">20</_version>
+            <_version dataType="Int">21</_version>
           </shapes>
         </item>
         <item dataType="Struct" type="DarknessNightThunder.ActorRenderer" id="2763233498">
