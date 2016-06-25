@@ -51,15 +51,23 @@ namespace DarknessNightThunder
 		
 		bool ICmpRenderer.IsVisible(IDrawDevice device)
 		{
-			return (device.VisibilityMask & VisibilityFlag.AllGroups) != VisibilityFlag.None;
+			return 
+				DualityApp.ExecContext != DualityApp.ExecutionContext.Editor &&
+				(device.VisibilityMask & VisibilityFlag.AllGroups) != VisibilityFlag.None;
 		}
 		void ICmpRenderer.Draw(IDrawDevice device)
 		{
 			Canvas canvas = new Canvas(device);
 			if ((device.VisibilityMask & VisibilityFlag.ScreenOverlay) != VisibilityFlag.None)
+			{
 				this.DrawOverlayPass(canvas);
-			else if ((device.VisibilityMask & VisibilityFlag.Group1) != VisibilityFlag.None)
+			}
+			else if (
+				(device.VisibilityMask & VisibilityFlag.ScreenOverlay) == VisibilityFlag.None && 
+				(device.VisibilityMask & VisibilityFlag.Group1) != VisibilityFlag.None)
+			{
 				this.DrawLightPass(canvas);
+			}
 		}
 
 		private void DrawLightPass(Canvas canvas)

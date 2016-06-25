@@ -65,8 +65,19 @@
                 <item dataType="Struct" type="Duality.Components.Camera+Pass" id="1815898796">
                   <clearColor dataType="Struct" type="Duality.Drawing.ColorRgba" />
                   <clearDepth dataType="Float">1</clearDepth>
+                  <clearFlags dataType="Enum" type="Duality.Drawing.ClearFlag" name="Depth" value="2" />
+                  <input />
+                  <matrixMode dataType="Enum" type="Duality.Drawing.RenderMatrix" name="OrthoScreen" value="1" />
+                  <output dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.RenderTarget]]">
+                    <contentPath dataType="String">Data\System\LightTarget.RenderTarget.res</contentPath>
+                  </output>
+                  <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group1, AllFlags" value="2147483650" />
+                </item>
+                <item dataType="Struct" type="Duality.Components.Camera+Pass" id="1193870354">
+                  <clearColor dataType="Struct" type="Duality.Drawing.ColorRgba" />
+                  <clearDepth dataType="Float">1</clearDepth>
                   <clearFlags dataType="Enum" type="Duality.Drawing.ClearFlag" name="All" value="3" />
-                  <input dataType="Struct" type="Duality.Drawing.BatchInfo" id="1316770680">
+                  <input dataType="Struct" type="Duality.Drawing.BatchInfo" id="157057974">
                     <dirtyFlag dataType="Enum" type="Duality.Drawing.BatchInfo+DirtyFlag" name="None" value="0" />
                     <hashCode dataType="Int">848659869</hashCode>
                     <mainColor dataType="Struct" type="Duality.Drawing.ColorRgba">
@@ -78,7 +89,7 @@
                     <technique dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.DrawTechnique]]">
                       <contentPath dataType="String">Data\System\MergeToScreen.DrawTechnique.res</contentPath>
                     </technique>
-                    <textures dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.String],[Duality.ContentRef`1[[Duality.Resources.Texture]]]]" id="3739017068" surrogate="true">
+                    <textures dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.String],[Duality.ContentRef`1[[Duality.Resources.Texture]]]]" id="688346464" surrogate="true">
                       <header />
                       <body>
                         <mainTex dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Texture]]">
@@ -89,7 +100,7 @@
                         </lightTex>
                       </body>
                     </textures>
-                    <uniforms dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.String],[System.Single[]]]" id="2704811062" surrogate="true">
+                    <uniforms dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.String],[System.Single[]]]" id="3918902414" surrogate="true">
                       <header />
                       <body />
                     </uniforms>
@@ -98,17 +109,17 @@
                   <output dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.RenderTarget]]" />
                   <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="None" value="0" />
                 </item>
-                <item dataType="Struct" type="Duality.Components.Camera+Pass" id="1193870354">
+                <item dataType="Struct" type="Duality.Components.Camera+Pass" id="693336712">
                   <clearColor dataType="Struct" type="Duality.Drawing.ColorRgba" />
                   <clearDepth dataType="Float">1</clearDepth>
                   <clearFlags dataType="Enum" type="Duality.Drawing.ClearFlag" name="None" value="0" />
                   <input />
                   <matrixMode dataType="Enum" type="Duality.Drawing.RenderMatrix" name="OrthoScreen" value="1" />
                   <output dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.RenderTarget]]" />
-                  <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="All" value="4294967295" />
+                  <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0, AllFlags" value="2147483649" />
                 </item>
               </_items>
-              <_size dataType="Int">4</_size>
+              <_size dataType="Int">5</_size>
               <_version dataType="Int">3</_version>
             </passes>
             <perspective dataType="Enum" type="Duality.Drawing.PerspectiveMode" name="Parallax" value="1" />
@@ -594,7 +605,7 @@
                   <shapes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.Physics.ShapeInfo]]" id="3389116725">
                     <_items dataType="Array" type="Duality.Components.Physics.ShapeInfo[]" id="3351026678" length="64" />
                     <_size dataType="Int">0</_size>
-                    <_version dataType="Int">4052</_version>
+                    <_version dataType="Int">4772</_version>
                   </shapes>
                 </item>
                 <item dataType="Struct" type="Duality.Plugins.Tilemaps.TilemapCollider" id="2359977928">
@@ -722,6 +733,13 @@
         <_items dataType="Array" type="Duality.Component[]" id="4084153038" length="4">
           <item dataType="Struct" type="DarknessNightThunder.LightingController" id="1983233360">
             <active dataType="Bool">true</active>
+            <ambientLight dataType="Struct" type="Duality.Drawing.ColorRgba">
+              <A dataType="Byte">255</A>
+              <B dataType="Byte">255</B>
+              <G dataType="Byte">218</G>
+              <R dataType="Byte">164</R>
+            </ambientLight>
+            <ambientLightIntensity dataType="Float">0</ambientLightIntensity>
             <gameobj dataType="ObjectRef">775455179</gameobj>
             <lightTarget dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.RenderTarget]]">
               <contentPath dataType="String">Data\System\LightTarget.RenderTarget.res</contentPath>
