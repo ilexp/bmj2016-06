@@ -39,17 +39,66 @@
             <gameobj dataType="ObjectRef">3761029062</gameobj>
             <nearZ dataType="Float">0</nearZ>
             <passes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.Camera+Pass]]" id="293189449">
-              <_items dataType="Array" type="Duality.Components.Camera+Pass[]" id="79299470" length="4">
+              <_items dataType="Array" type="Duality.Components.Camera+Pass[]" id="79299470">
                 <item dataType="Struct" type="Duality.Components.Camera+Pass" id="2606380240">
                   <clearColor dataType="Struct" type="Duality.Drawing.ColorRgba" />
                   <clearDepth dataType="Float">1</clearDepth>
                   <clearFlags dataType="Enum" type="Duality.Drawing.ClearFlag" name="All" value="3" />
                   <input />
                   <matrixMode dataType="Enum" type="Duality.Drawing.RenderMatrix" name="PerspectiveWorld" value="0" />
-                  <output dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.RenderTarget]]" />
-                  <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="AllGroups" value="2147483647" />
+                  <output dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.RenderTarget]]">
+                    <contentPath dataType="String">Data\System\WorldTarget.RenderTarget.res</contentPath>
+                  </output>
+                  <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
                 <item dataType="Struct" type="Duality.Components.Camera+Pass" id="1919160942">
+                  <clearColor dataType="Struct" type="Duality.Drawing.ColorRgba" />
+                  <clearDepth dataType="Float">1</clearDepth>
+                  <clearFlags dataType="Enum" type="Duality.Drawing.ClearFlag" name="All" value="3" />
+                  <input />
+                  <matrixMode dataType="Enum" type="Duality.Drawing.RenderMatrix" name="PerspectiveWorld" value="0" />
+                  <output dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.RenderTarget]]">
+                    <contentPath dataType="String">Data\System\LightTarget.RenderTarget.res</contentPath>
+                  </output>
+                  <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group1" value="2" />
+                </item>
+                <item dataType="Struct" type="Duality.Components.Camera+Pass" id="1815898796">
+                  <clearColor dataType="Struct" type="Duality.Drawing.ColorRgba" />
+                  <clearDepth dataType="Float">1</clearDepth>
+                  <clearFlags dataType="Enum" type="Duality.Drawing.ClearFlag" name="All" value="3" />
+                  <input dataType="Struct" type="Duality.Drawing.BatchInfo" id="1316770680">
+                    <dirtyFlag dataType="Enum" type="Duality.Drawing.BatchInfo+DirtyFlag" name="None" value="0" />
+                    <hashCode dataType="Int">848659869</hashCode>
+                    <mainColor dataType="Struct" type="Duality.Drawing.ColorRgba">
+                      <A dataType="Byte">255</A>
+                      <B dataType="Byte">255</B>
+                      <G dataType="Byte">255</G>
+                      <R dataType="Byte">255</R>
+                    </mainColor>
+                    <technique dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.DrawTechnique]]">
+                      <contentPath dataType="String">Data\System\MergeToScreen.DrawTechnique.res</contentPath>
+                    </technique>
+                    <textures dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.String],[Duality.ContentRef`1[[Duality.Resources.Texture]]]]" id="3739017068" surrogate="true">
+                      <header />
+                      <body>
+                        <mainTex dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Texture]]">
+                          <contentPath dataType="String">Data\System\WorldTargetTex.Texture.res</contentPath>
+                        </mainTex>
+                        <lightTex dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Texture]]">
+                          <contentPath dataType="String">Data\System\LightTargetTex.Texture.res</contentPath>
+                        </lightTex>
+                      </body>
+                    </textures>
+                    <uniforms dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.String],[System.Single[]]]" id="2704811062" surrogate="true">
+                      <header />
+                      <body />
+                    </uniforms>
+                  </input>
+                  <matrixMode dataType="Enum" type="Duality.Drawing.RenderMatrix" name="OrthoScreen" value="1" />
+                  <output dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.RenderTarget]]" />
+                  <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="None" value="0" />
+                </item>
+                <item dataType="Struct" type="Duality.Components.Camera+Pass" id="1193870354">
                   <clearColor dataType="Struct" type="Duality.Drawing.ColorRgba" />
                   <clearDepth dataType="Float">1</clearDepth>
                   <clearFlags dataType="Enum" type="Duality.Drawing.ClearFlag" name="None" value="0" />
@@ -59,8 +108,8 @@
                   <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="All" value="4294967295" />
                 </item>
               </_items>
-              <_size dataType="Int">2</_size>
-              <_version dataType="Int">2</_version>
+              <_size dataType="Int">4</_size>
+              <_version dataType="Int">3</_version>
             </passes>
             <perspective dataType="Enum" type="Duality.Drawing.PerspectiveMode" name="Parallax" value="1" />
             <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="All" value="4294967295" />
@@ -545,7 +594,7 @@
                   <shapes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.Physics.ShapeInfo]]" id="3389116725">
                     <_items dataType="Array" type="Duality.Components.Physics.ShapeInfo[]" id="3351026678" length="64" />
                     <_size dataType="Int">0</_size>
-                    <_version dataType="Int">2552</_version>
+                    <_version dataType="Int">4052</_version>
                   </shapes>
                 </item>
                 <item dataType="Struct" type="Duality.Plugins.Tilemaps.TilemapCollider" id="2359977928">
@@ -663,6 +712,93 @@
       </identifier>
       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
       <name dataType="String">Player</name>
+      <parent />
+      <prefabLink />
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="775455179">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="4190313145">
+        <_items dataType="Array" type="Duality.Component[]" id="4084153038" length="4">
+          <item dataType="Struct" type="DarknessNightThunder.LightingController" id="1983233360">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">775455179</gameobj>
+            <lightTarget dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.RenderTarget]]">
+              <contentPath dataType="String">Data\System\LightTarget.RenderTarget.res</contentPath>
+            </lightTarget>
+            <worldTarget dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.RenderTarget]]">
+              <contentPath dataType="String">Data\System\WorldTarget.RenderTarget.res</contentPath>
+            </worldTarget>
+          </item>
+        </_items>
+        <_size dataType="Int">1</_size>
+        <_version dataType="Int">1</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1824800512" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Object[]" id="1353749779">
+            <item dataType="Type" id="4072390374" value="DarknessNightThunder.LightingController" />
+          </keys>
+          <values dataType="Array" type="System.Object[]" id="3476209912">
+            <item dataType="ObjectRef">1983233360</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform />
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="270568441">Mc/D0vujfk6u6F/8xKwihA==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">LightingController</name>
+      <parent />
+      <prefabLink />
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="688381827">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="603377457">
+        <_items dataType="Array" type="Duality.Component[]" id="2914553902" length="4">
+          <item dataType="Struct" type="DarknessNightThunder.HudRenderer" id="3384257274">
+            <active dataType="Bool">true</active>
+            <cursorLight dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+              <contentPath dataType="String">Data\Sprites\CursorLight.Material.res</contentPath>
+            </cursorLight>
+            <cursorLightSize dataType="Float">200</cursorLightSize>
+            <gameobj dataType="ObjectRef">688381827</gameobj>
+            <player dataType="ObjectRef">2098455836</player>
+            <playerLight dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+              <contentPath dataType="String">Data\Sprites\PlayerLight.Material.res</contentPath>
+            </playerLight>
+            <playerLightSize dataType="Float">200</playerLightSize>
+          </item>
+        </_items>
+        <_size dataType="Int">1</_size>
+        <_version dataType="Int">1</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2426990176" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Object[]" id="3788047131">
+            <item dataType="Type" id="3001286806" value="DarknessNightThunder.HudRenderer" />
+          </keys>
+          <values dataType="Array" type="System.Object[]" id="1311203176">
+            <item dataType="ObjectRef">3384257274</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform />
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="159647697">jJpDqERFWEWuusSwlHPfVw==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">HudRenderer</name>
       <parent />
       <prefabLink />
     </item>

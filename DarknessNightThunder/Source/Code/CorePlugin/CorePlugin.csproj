@@ -65,6 +65,8 @@
     <Compile Include="CharacterAnimator.cs" />
     <Compile Include="CharacterController.cs" />
     <Compile Include="CorePlugin.cs" />
+    <Compile Include="LightingController.cs" />
+    <Compile Include="HudRenderer.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
