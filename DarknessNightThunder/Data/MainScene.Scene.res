@@ -35,7 +35,7 @@
           <item dataType="Struct" type="Duality.Components.Camera" id="3337573">
             <active dataType="Bool">true</active>
             <farZ dataType="Float">10000</farZ>
-            <focusDist dataType="Float">500</focusDist>
+            <focusDist dataType="Float">1000</focusDist>
             <gameobj dataType="ObjectRef">3761029062</gameobj>
             <nearZ dataType="Float">0</nearZ>
             <passes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.Camera+Pass]]" id="293189449">
@@ -297,6 +297,7 @@
               <parent />
               <prefabLink />
             </targetObj>
+            <targetZDist dataType="Float">500</targetZDist>
           </item>
         </_items>
         <_size dataType="Int">4</_size>
@@ -627,7 +628,7 @@
                   <shapes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.Physics.ShapeInfo]]" id="3389116725">
                     <_items dataType="Array" type="Duality.Components.Physics.ShapeInfo[]" id="3351026678" length="64" />
                     <_size dataType="Int">0</_size>
-                    <_version dataType="Int">7652</_version>
+                    <_version dataType="Int">8012</_version>
                   </shapes>
                 </item>
                 <item dataType="Struct" type="Duality.Plugins.Tilemaps.TilemapCollider" id="2359977928">
@@ -813,7 +814,7 @@
             <playerLight dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
               <contentPath dataType="String">Data\Sprites\PlayerLight.Material.res</contentPath>
             </playerLight>
-            <playerLightSize dataType="Float">200</playerLightSize>
+            <playerLightSize dataType="Float">400</playerLightSize>
           </item>
         </_items>
         <_size dataType="Int">1</_size>

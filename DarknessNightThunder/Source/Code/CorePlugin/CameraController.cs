@@ -20,8 +20,9 @@ namespace DarknessNightThunder
 	[RequiredComponent(typeof(Camera))]
 	public class CameraController : Component, ICmpUpdatable, ICmpInitializable
 	{
-		private float      smoothness = 1.0f;
-		private GameObject targetObj  = null;
+		private float      targetZDist = 500.0f;
+		private float      smoothness  = 1.0f;
+		private GameObject targetObj   = null;
 
 		[DontSerialize] private Rect mapRect;
 
@@ -74,7 +75,7 @@ namespace DarknessNightThunder
 			focusPos.X = MathF.Clamp(focusPos.X, moveRect.X, moveRect.X + moveRect.W);
 			focusPos.Y = MathF.Clamp(focusPos.Y, moveRect.Y, moveRect.Y + moveRect.H);
 			// The position where the camera itself should move
-			Vector3 targetPos = focusPos - new Vector3(0.0f, 0.0f, camera.FocusDist);
+			Vector3 targetPos = focusPos - new Vector3(0.0f, 0.0f, this.targetZDist);
 			// A relative movement vector that would place the camera directly at its target position.
 			Vector3 posDiff = (targetPos - transform.Pos);
 			// A relative movement vector that doesn't go all the way, but just a bit towards its target.

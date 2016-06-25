@@ -161,7 +161,7 @@
                 </colorTint>
                 <customFrameSequence />
                 <customMat />
-                <depthScale dataType="Float">0.01</depthScale>
+                <depthScale dataType="Float">0.005</depthScale>
                 <gameobj dataType="ObjectRef">1010540099</gameobj>
                 <height dataType="Float">0</height>
                 <isVertical dataType="Bool">false</isVertical>
@@ -254,7 +254,7 @@
               </item>
             </_items>
             <_size dataType="Int">1</_size>
-            <_version dataType="Int">14</_version>
+            <_version dataType="Int">16</_version>
           </shapes>
         </item>
         <item dataType="Struct" type="DarknessNightThunder.ActorRenderer" id="2763233498">

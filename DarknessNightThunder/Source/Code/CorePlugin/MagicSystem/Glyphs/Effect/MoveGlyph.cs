@@ -102,7 +102,7 @@ namespace DarknessNightThunder.Glyphs
 							MathF.Clamp(targetForceFactor * p.Body.Mass / 150.0f, 0.0f, 1.0f);
 						float usedEnergy = cursor.BoundTo.DrainEnergy(requestedEnergy);
 
-						p.Body.ApplyWorldImpulse(2.0f * efficiency * targetVelDir * usedEnergy);
+						p.Body.ApplyWorldImpulse(5.0f * efficiency * targetVelDir * usedEnergy);
 					}
 				}
 			}
