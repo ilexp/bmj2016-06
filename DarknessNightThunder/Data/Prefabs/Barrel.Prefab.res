@@ -94,7 +94,7 @@
                   <X dataType="Float">0</X>
                   <Y dataType="Float">-1</Y>
                 </position>
-                <radius dataType="Float">8</radius>
+                <radius dataType="Float">10</radius>
                 <restitution dataType="Float">0.3</restitution>
                 <sensor dataType="Bool">false</sensor>
               </item>
@@ -112,7 +112,7 @@
               </item>
             </_items>
             <_size dataType="Int">2</_size>
-            <_version dataType="Int">4</_version>
+            <_version dataType="Int">6</_version>
           </shapes>
         </item>
         <item dataType="Struct" type="DarknessNightThunder.SpellInteractor" id="1436323414">
