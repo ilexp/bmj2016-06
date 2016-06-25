@@ -58,7 +58,8 @@ namespace DarknessNightThunder
 		void ICmpRenderer.Draw(IDrawDevice device)
 		{
 			Canvas canvas = new Canvas(device);
-			if ((device.VisibilityMask & VisibilityFlag.ScreenOverlay) != VisibilityFlag.None)
+			if ((device.VisibilityMask & VisibilityFlag.ScreenOverlay) != VisibilityFlag.None && 
+				(device.VisibilityMask & VisibilityFlag.Group0) != VisibilityFlag.None)
 			{
 				this.DrawOverlayPass(canvas);
 			}
@@ -74,15 +75,21 @@ namespace DarknessNightThunder
 		{
 			Camera mainCam = this.GameObj.ParentScene.FindComponent<Camera>();
 
-			Vector3 mouseWorldCoord = mainCam.GetSpaceCoord(DualityApp.Mouse.Pos);
-			Vector3 playerWorldCoord = this.player.Character.GameObj.Transform.Pos;
+			SpellScriptEditor spellEditor = Scene.Current.FindComponent<SpellScriptEditor>();
+			bool spellEditorActive = (spellEditor != null && spellEditor.Active);
 
-			canvas.State.SetMaterial(this.cursorLight);
-			canvas.FillRect(
-				mouseWorldCoord.X - this.cursorLightSize, 
-				mouseWorldCoord.Y - this.cursorLightSize, 
-				this.cursorLightSize * 2, 
-				this.cursorLightSize * 2);
+			Vector3 mouseWorldCoord = mainCam.GetSpaceCoord(DualityApp.Mouse.Pos);
+			Vector3 playerWorldCoord = this.player.CharacterController.GameObj.Transform.Pos;
+
+			if (!spellEditorActive)
+			{
+				canvas.State.SetMaterial(this.cursorLight);
+				canvas.FillRect(
+					mouseWorldCoord.X - this.cursorLightSize, 
+					mouseWorldCoord.Y - this.cursorLightSize, 
+					this.cursorLightSize * 2, 
+					this.cursorLightSize * 2);
+			}
 			canvas.State.SetMaterial(this.playerLight);
 			canvas.FillRect(
 				playerWorldCoord.X - this.playerLightSize, 
@@ -92,7 +99,77 @@ namespace DarknessNightThunder
 		}
 		private void DrawOverlayPass(Canvas canvas)
 		{
-			canvas.FillCircle(DualityApp.Mouse.X, DualityApp.Mouse.Y, 3.0f);
+			canvas.State.SetMaterial(new BatchInfo(DrawTechnique.Alpha, ColorRgba.White));
+
+			Player player = Scene.Current.FindComponent<Player>();
+			Character character = player != null ? player.Character : null;
+
+			if (character != null)
+			{
+				canvas.PushState();
+				canvas.State.ColorTint = ColorRgba.Red * ColorRgba.Grey;
+				canvas.FillRect(
+					canvas.DrawDevice.TargetSize.X - 10 - 30, 
+					canvas.DrawDevice.TargetSize.Y - 10 - character.Health, 
+					30, 
+					character.Health);
+				canvas.State.ColorTint = ColorRgba.White.WithAlpha(0.5f);
+				canvas.DrawRect(
+					canvas.DrawDevice.TargetSize.X - 10 - 30, 
+					canvas.DrawDevice.TargetSize.Y - 10 - 100, 
+					30, 
+					100);
+				canvas.State.ColorTint = ColorRgba.Blue * ColorRgba.Grey;
+				canvas.FillRect(
+					canvas.DrawDevice.TargetSize.X - 10 - 30 - 10 - 30, 
+					canvas.DrawDevice.TargetSize.Y - 10 - character.Mana, 
+					30, 
+					character.Mana);
+				canvas.State.ColorTint = ColorRgba.White.WithAlpha(0.5f);
+				canvas.DrawRect(
+					canvas.DrawDevice.TargetSize.X - 10 - 30 - 10 - 30, 
+					canvas.DrawDevice.TargetSize.Y - 10 - 100, 
+					30, 
+					100);
+				canvas.PopState();
+
+				if (character.DamageReaction > 0.005f)
+				{
+					canvas.PushState();
+					canvas.State.SetMaterial(new BatchInfo(DrawTechnique.Add, ColorRgba.White));
+					canvas.State.ColorTint = ColorRgba.Red.WithAlpha(character.DamageReaction * 0.5f);
+					canvas.FillRect(0, 0, canvas.Width, canvas.Height);
+					canvas.PopState();
+				}
+			}
+			
+			SpellScriptEditor spellEditor = Scene.Current.FindComponent<SpellScriptEditor>();
+			bool spellEditorActive = (spellEditor != null && spellEditor.Active);
+			if (!spellEditorActive)
+			{
+				canvas.DrawText(new string[] { 
+					"P:     Toggle Spell Editor",
+					"WASD:  Move around",
+					"Click: Cast the spell"},
+					10, canvas.DrawDevice.TargetSize.Y - 10, 0, Alignment.BottomLeft, true);
+			}
+			else
+			{
+				canvas.DrawText(new string[] { 
+					"P:     Toggle Spell Editor",
+					"F-Key: Load Spell Preset",
+					"Shift+",
+					"F-Key: Save Spell Preset",
+					"",
+					"Type on the Keyboard to create Glyphs,",
+					"or just use the Mouse Wheel."},
+					10, canvas.DrawDevice.TargetSize.Y - 10, 0, Alignment.BottomLeft, true);
+			}
+
+			canvas.State.ColorTint = ColorRgba.White;
+			canvas.FillCircle(DualityApp.Mouse.X, DualityApp.Mouse.Y, 4);
+			canvas.State.ColorTint = ColorRgba.Black;
+			canvas.FillCircleSegment(DualityApp.Mouse.X, DualityApp.Mouse.Y, 0, 4, 0, MathF.RadAngle360, 1.5f);
 		}
 	}
 }

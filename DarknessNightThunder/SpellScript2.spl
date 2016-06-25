@@ -1,0 +1,125 @@
+﻿<root dataType="Struct" type="DarknessNightThunder.SpellScript" id="129723834">
+  <glyphGrid dataType="Struct" type="Duality.Grid`1[[DarknessNightThunder.SpellGlyph]]" id="427169525">
+    <height dataType="Int">10</height>
+    <sequence dataType="Struct" type="Duality.RawList`1[[DarknessNightThunder.SpellGlyph]]" id="1100841590">
+      <count dataType="Int">200</count>
+      <data dataType="Array" type="DarknessNightThunder.SpellGlyph[]" id="2824927200" length="200">
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item dataType="Struct" type="DarknessNightThunder.Glyphs.MarkerGlyph" id="3329633244">
+          <index dataType="Int">0</index>
+        </item>
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item dataType="Struct" type="DarknessNightThunder.Glyphs.SourceGlyph" id="2319395094" />
+        <item dataType="Struct" type="DarknessNightThunder.Glyphs.FocusGlyph" id="3403136328" />
+        <item dataType="Struct" type="DarknessNightThunder.Glyphs.MarkerGlyph" id="1219731890">
+          <index dataType="Int">0</index>
+        </item>
+        <item dataType="Struct" type="DarknessNightThunder.Glyphs.MoveGlyph" id="1154290804" />
+        <item dataType="Struct" type="DarknessNightThunder.Glyphs.GotoGlyph" id="4239527566" />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item />
+        <item dataType="Struct" type="DarknessNightThunder.Glyphs.FocusGlyph" id="1862805248" />
+      </data>
+    </sequence>
+    <width dataType="Int">20</width>
+  </glyphGrid>
+</root>
+<!-- XmlFormatterBase Document Separator -->

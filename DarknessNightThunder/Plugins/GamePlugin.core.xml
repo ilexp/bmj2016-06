@@ -201,6 +201,14 @@
             Applies "retro RPG"-like character movement based on a physical model.
             </summary>
         </member>
+        <member name="M:DarknessNightThunder.ISpellHost.DrainEnergy(System.Single)">
+            <summary>
+            Atemmpts to drain the specified amount of energy from the spell host and returns the
+            amount of energy that was actually drained.
+            </summary>
+            <param name="required"></param>
+            <returns></returns>
+        </member>
         <member name="T:DarknessNightThunder.CharacterController">
             <summary>
             Applies "retro RPG"-like character movement based on a physical model.
@@ -211,9 +219,14 @@
             Defines a Duality core plugin.
             </summary>
         </member>
+        <member name="P:DarknessNightThunder.SpellVars.ObjectVar.Elements">
+            <summary>
+            [GET] Enumerates all the elements in this object variable, sorted from most to least weight.
+            </summary>
+        </member>
         <member name="T:DarknessNightThunder.Player">
             <summary>
-            Represents a player and applies user input to the controlled <see cref="T:DarknessNightThunder.CharacterController"/>.
+            Represents a player and applies user input to the controlled <see cref="P:DarknessNightThunder.Player.CharacterController"/>.
             </summary>
         </member>
     </members>
