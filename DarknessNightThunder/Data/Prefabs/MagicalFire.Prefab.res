@@ -161,11 +161,11 @@
                 </colorTint>
                 <customFrameSequence />
                 <customMat />
-                <depthScale dataType="Float">0.005</depthScale>
+                <depthScale dataType="Float">0.01</depthScale>
                 <gameobj dataType="ObjectRef">1010540099</gameobj>
                 <height dataType="Float">0</height>
                 <isVertical dataType="Bool">false</isVertical>
-                <offset dataType="Float">-0.01</offset>
+                <offset dataType="Float">-0.02</offset>
                 <rect dataType="Struct" type="Duality.Rect">
                   <H dataType="Float">128</H>
                   <W dataType="Float">128</W>
@@ -254,7 +254,7 @@
               </item>
             </_items>
             <_size dataType="Int">1</_size>
-            <_version dataType="Int">21</_version>
+            <_version dataType="Int">23</_version>
           </shapes>
         </item>
         <item dataType="Struct" type="DarknessNightThunder.ActorRenderer" id="2763233498">
